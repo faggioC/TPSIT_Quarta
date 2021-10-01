@@ -23,10 +23,12 @@ int main()
 
     for(k = 0; k < DIM; k++){
         printf("Inserisci il nome dello studente: ");
-        scanf("%s", &alunni[k].nome);
+        fflush(stdin);
+        scanf("%s", alunni[k].nome);
 
         printf("Inserisci il cognome dello studente: ");
-        scanf("%s", &alunni[k].cognome);
+        fflush(stdin);
+        scanf("%s", alunni[k].cognome);
 
         printf("Inserisci il numero della matricola: ");
         scanf("%d", &alunni[k].matricola);
