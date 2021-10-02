@@ -1,2 +1,2 @@
-# TPSIT_Quarta
+# Tpsit
 Esericizi di TPSIT - Classe Quarta
