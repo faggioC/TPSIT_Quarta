@@ -14,20 +14,20 @@ typedef struct {
     char dispo[D];
 } Cinema;
 
-/*int leggiRighe(char nomeFile[]){
+int leggiRighe(char nomeFile[]){
     FILE *fp;
     char line[100];
     int conta=0;
 
     fp=fopen(nomeFile,"r");
-    while((fgets(line,100,fp))== false){
+    while(fgets(line,100,fp)){
         conta++;
     }
     fclose(fp);
 
  return conta;
 }
-*/
+
 void caricaVettore(Cinema v[], int n, char nomeFilm[]) {
     FILE *fp;
     int conta=0;
@@ -70,9 +70,13 @@ void stampaVettore(Cinema v[], int n){
 
 int main() {
     int n;
-    //leggiRighe("listafilm.csv");
-    Cinema film[DIM];
+    Cinema *film;
+    n = leggiRighe("listafilm.csv");
+    film = (Cinema*)malloc(n * sizeof(Cinema));
+
     caricaVettore(film,DIM, "listafilm.csv");
     stampaVettore(film, DIM);
+    free(film);
+
     return 0;
 }
