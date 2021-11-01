@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1635754133 source:c:\users\faggi\desktop\es8\main.c
+	<stdio.h>
+	<stdlib.h>
+
